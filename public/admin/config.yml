@@ -1,5 +1,6 @@
 # This line adds the logo to the browser tab.
-custom_head: '<link rel="icon" type="image/svg+xml" href="/icon.svg" />'
+# We are now using the full URL to avoid any path issues.
+custom_head: '<link rel="icon" type="image/svg+xml" href="https://bg.363689.xyz/icon.svg" />'
 
 # The 'backend' section has been reformatted with correct indentation.
 backend:
@@ -71,3 +72,4 @@ collections:
           required: true,
         }
       - { label: "正文", name: "body", widget: "markdown" }
+
