@@ -25,3 +25,21 @@
 		--theme-quote: 102deg 100% 86%;
 	}
 }
+
+/* --- 从这里开始添加下面的代码 --- */
+
+/* 移除三级标题前自动添加的'#'号装饰 */
+h3::before {
+  content: none !important;
+}
+
+/* 如果其他标题也有#，可以取消下面这段代码的注释 */
+/*
+h1::before,
+h2::before,
+h4::before,
+h5::before,
+h6::before {
+  content: none !important;
+}
+*/
