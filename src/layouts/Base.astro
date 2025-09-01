@@ -19,6 +19,10 @@ const {
 <html class="scroll-smooth" lang={siteConfig.lang}>
 	<head>
 		<BaseHead articleDate={articleDate} description={description} ogImage={ogImage} title={title} />
+		
+		<!-- 下面这行是新添加的，用于显示浏览器标签页的 Logo -->
+		<link rel="icon" type="image/svg+xml" href="/icon.svg" />
+
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css"
