@@ -1,4 +1,7 @@
+# This line adds the logo to the browser tab.
 custom_head: '<link rel="icon" type="image/svg+xml" href="/icon.svg" />'
+
+# The 'backend' section has been reformatted with correct indentation.
 backend:
   name: github
   branch: main # change this to your branch
@@ -6,6 +9,11 @@ backend:
   site_domain: bg.363689.xyz # 2、change this to your domain
   base_url: https://bg.363689.xyz # 3、change this to your prod URL
   auth_endpoint: oauth # the oauth route provided by the integration
+
+# Media files will be stored in this folder in the repository.
+media_folder: "public/assets/images"
+# The src attribute for uploaded media will begin with this path.
+public_folder: "/assets/images"
 
 collections:
   - name: "note"
@@ -51,6 +59,7 @@ collections:
           name: "publishDate",
           widget: "datetime",
           date_format: "YYYY-MM-DD",
+          time_format: "HH:mm",
           required: true,
         }
       - { label: "标签", name: "tags", widget: "list", required: true }
@@ -62,7 +71,3 @@ collections:
           required: true,
         }
       - { label: "正文", name: "body", widget: "markdown" }
-
-media_folder: "public/assets/images" # 文件将被存储在仓库中的位置
-public_folder: "/assets/images" # 上传媒体文件的 src 属性
-
