@@ -47,18 +47,18 @@ h6::before {
 
 /* 1. 在触摸设备上，让按钮默认半透明，不那么突兀 (模拟悬浮效果) */
 .expressive-code .copy button {
-	opacity: 0.6;
+	opacity: 0.6 !important;
 	transition: opacity 0.2s ease-in-out;
 }
 
-/* 2. 当用户点击(激活)代码块时，让按钮完全显示 */
+/* 2. 当用户触摸代码块时，让按钮完全显示 */
 .expressive-code:active .copy button,
 .expressive-code:focus-within .copy button {
-	opacity: 1;
+	opacity: 1 !important;
 }
 
 /* 3. 在手机屏幕上(宽度小于640px)，强制缩小图标尺寸 */
-/* 使用更高优先级的选择器并加上 !important 确保覆盖 */
+/* 使用最高优先级的选择器并加上 !important 来确保覆盖 */
 @media (max-width: 640px) {
 	html body .expressive-code .copy button {
 		width: 2.25rem !important;
