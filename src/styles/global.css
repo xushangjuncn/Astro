@@ -43,11 +43,26 @@ h6::before {
   content: none !important;
 }
 
-/* 修复：在手机端缩小代码块的复制图标 */
+/* --- 修复并优化代码块复制按钮在手机上的样式 --- */
+
+/* 1. 在触摸设备上，让按钮默认半透明，不那么突兀 */
+.expressive-code .copy button {
+	opacity: 0.6;
+	transition: opacity 0.2s ease-in-out;
+}
+
+/* 2. 当用户点击(激活)代码块时，让按钮完全显示 */
+.expressive-code:active .copy button,
+.expressive-code:focus-within .copy button {
+	opacity: 1;
+}
+
+/* 3. 在手机屏幕上(宽度小于640px)，强制缩小图标尺寸 */
+/* 我们增加了选择器优先级并使用 !important 来确保覆盖默认样式 */
 @media (max-width: 640px) {
-	.expressive-code .copy button {
-		width: 2.25rem; /* 调整宽度 */
-		height: 2.25rem; /* 调整高度 */
-		padding: 0.5rem; /* 调整内边距 */
+	html body .expressive-code .copy button {
+		width: 2.25rem !important;
+		height: 2.25rem !important;
+		padding: 0.5rem !important;
 	}
 }
