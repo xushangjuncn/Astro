@@ -34,7 +34,7 @@ h3::before {
 }
 
 /* 如果其他标题也有#，可以取消下面这段代码的注释 */
-/*
+
 h1::before,
 h2::before,
 h4::before,
@@ -42,4 +42,12 @@ h5::before,
 h6::before {
   content: none !important;
 }
-*/
+
+/* 修复：在手机端缩小代码块的复制图标 */
+@media (max-width: 640px) {
+	.expressive-code .copy button {
+		width: 2.25rem; /* 调整宽度 */
+		height: 2.25rem; /* 调整高度 */
+		padding: 0.5rem; /* 调整内边距 */
+	}
+}
