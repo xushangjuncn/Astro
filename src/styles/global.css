@@ -43,9 +43,9 @@ h6::before {
   content: none !important;
 }
 
-/* --- 修复并优化代码块复制按钮在手机上的样式 --- */
+/* --- 最终修复：强制重置代码块复制按钮在手机上的样式 --- */
 
-/* 1. 在触摸设备上，让按钮默认半透明，不那么突兀 */
+/* 1. 在触摸设备上，让按钮默认半透明，不那么突兀 (模拟悬浮效果) */
 .expressive-code .copy button {
 	opacity: 0.6;
 	transition: opacity 0.2s ease-in-out;
@@ -58,7 +58,7 @@ h6::before {
 }
 
 /* 3. 在手机屏幕上(宽度小于640px)，强制缩小图标尺寸 */
-/* 我们增加了选择器优先级并使用 !important 来确保覆盖默认样式 */
+/* 使用更高优先级的选择器并加上 !important 确保覆盖 */
 @media (max-width: 640px) {
 	html body .expressive-code .copy button {
 		width: 2.25rem !important;
